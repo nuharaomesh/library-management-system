@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="pane" prefHeight="726.0" prefWidth="1187.0" style="-fx-background-radius: 15;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.WelcomeFormController">
+   <children>
+      <Label layoutX="76.0" layoutY="89.0" text="Get Started" textFill="#480e8f">
+         <font>
+            <Font name="Padauk Bold" size="72.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="197.0" text="Welcome to BookWarm" textFill="#731ee1">
+         <font>
+            <Font name="Padauk Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="940.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo/BookWorm logo .png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="260.0" layoutY="562.0" onAction="#btnAdminOnAction" prefHeight="61.0" prefWidth="183.0" style="-fx-background-radius: 10; -fx-background-color: rgba(67, 0, 152, 1);" text="Admin" textFill="WHITE">
+         <font>
+            <Font name="Padauk Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="726.0" layoutY="562.0" onAction="#btnUserOnAction" prefHeight="61.0" prefWidth="183.0" style="-fx-background-radius: 10; -fx-background-color: rgba(43, 0, 97, 1);" text="User" textFill="WHITE">
+         <font>
+            <Font name="Padauk Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="233.0" fitWidth="233.0" layoutX="235.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/image/Admin.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="207.0" fitWidth="298.0" layoutX="669.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/image/User.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
