@@ -37,10 +37,10 @@
          </children></Pane>
       <ImageView fitHeight="29.0" fitWidth="117.0" layoutX="694.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/logo/BookWorm%20logo%202.png" />
+            <Image url="@../assets/logo/BookWorm logo 2.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="1106.0" layoutY="22.0" onAction="#btnSigninOnAction" text="Sign in" textFill="#3c0a7b">
+      <JFXButton layoutX="1106.0" layoutY="22.0" onAction="#btnSignInOnAction" text="Sign in" textFill="#3c0a7b">
          <font>
             <Font name="Padauk Bold" size="13.0" />
          </font>
@@ -55,7 +55,7 @@
             <Font name="Padauk Book Bold" size="35.0" />
          </font>
       </Label>
-      <TextField fx:id="txtRmail" layoutX="765.0" layoutY="362.0" prefHeight="41.0" prefWidth="329.0" promptText="example@gmail.com" style="-fx-background-radius: 5;">
+      <TextField fx:id="txtEmail" layoutX="765.0" layoutY="362.0" prefHeight="41.0" prefWidth="329.0" promptText="example@gmail.com" style="-fx-background-radius: 5;">
          <font>
             <Font name="System Italic" size="12.0" />
          </font></TextField>
@@ -74,7 +74,7 @@
          <font>
             <Font name="System Bold" size="13.0" />
          </font></JFXButton>
-      <JFXButton layoutX="983.0" layoutY="498.0" onAction="#btnFogetPasswordOnAction" prefHeight="30.0" prefWidth="117.0" text="Foget password?" textFill="#2b78f5">
+      <JFXButton layoutX="983.0" layoutY="498.0" onAction="#btnForgetPasswordOnAction" prefHeight="30.0" prefWidth="117.0" text="Foget password?" textFill="#2b78f5">
          <font>
             <Font name="Padauk Bold" size="13.0" />
          </font>
