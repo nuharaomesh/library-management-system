@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="726.0" prefWidth="1187.0" style="-fx-background-radius: 15;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserLoginFormController">
+<AnchorPane prefHeight="726.0" prefWidth="1187.0" style="-fx-background-radius: 15; -fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserLoginFormController">
    <children>
       <Pane prefHeight="726.0" prefWidth="665.0" style="-fx-background-color: rgba(31, 0, 69, 1); -fx-background-radius: 15 0 0 15;">
          <children>
@@ -14,11 +19,65 @@
                   <Image url="@../assets/image/user login white back.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="232.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="614.0" fitWidth="613.0" layoutX="32.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/image/pablita-woman-reading-a-book-at-home.gif" />
                </image>
             </ImageView>
+            <Label layoutX="213.0" layoutY="127.0" text="Welcome Back" textFill="WHITE">
+               <font>
+                  <Font name="Padauk Bold" size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="258.0" layoutY="180.0" text="you've been missed" textFill="WHITE">
+               <font>
+                  <Font name="Padauk Bold" size="17.0" />
+               </font>
+            </Label>
          </children></Pane>
+      <ImageView fitHeight="29.0" fitWidth="117.0" layoutX="694.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo/BookWorm%20logo%202.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="1106.0" layoutY="22.0" onAction="#btnSigninOnAction" text="Sign in" textFill="#3c0a7b">
+         <font>
+            <Font name="Padauk Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="795.0" layoutY="266.0" text="Enter your valid credential for logging" textFill="#4c23a7">
+         <font>
+            <Font name="Padauk Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="883.0" layoutY="213.0" text="Login" textFill="#492378">
+         <font>
+            <Font name="Padauk Book Bold" size="35.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtRmail" layoutX="765.0" layoutY="362.0" prefHeight="41.0" prefWidth="329.0" promptText="example@gmail.com" style="-fx-background-radius: 5;">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></TextField>
+      <Label layoutX="769.0" layoutY="334.0" text="Enter your e-mail address" textFill="#4d3867">
+         <font>
+            <Font name="Padauk" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="769.0" layoutY="428.0" text="Enter your password" textFill="#4d3867">
+         <font>
+            <Font name="Padauk" size="13.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtPassword" layoutX="765.0" layoutY="456.0" prefHeight="41.0" prefWidth="329.0" promptText="password" />
+      <JFXButton buttonType="RAISED" layoutX="765.0" layoutY="547.0" onAction="#btnLoginOnAction" prefHeight="41.0" prefWidth="329.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #7d12ff 0.0%, #380259 100.0%);" text="Log-in" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="983.0" layoutY="498.0" onAction="#btnFogetPasswordOnAction" prefHeight="30.0" prefWidth="117.0" text="Foget password?" textFill="#2b78f5">
+         <font>
+            <Font name="Padauk Bold" size="13.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
