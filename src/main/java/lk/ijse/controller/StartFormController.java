@@ -10,6 +10,8 @@ public class StartFormController {
 
     @FXML
     public AnchorPane root;
+    @FXML
+    public AnchorPane pane;
 
     public void initialize() throws IOException {
         this.root.getChildren().clear();
