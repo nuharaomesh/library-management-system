@@ -13,8 +13,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="726.0" prefWidth="1187.0" style="-fx-background-radius: 15;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserSignInFormController">
+<AnchorPane fx:id="pane" prefHeight="726.0" prefWidth="1187.0" style="-fx-background-radius: 15;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserSignInFormController">
    <children>
       <Pane layoutX="726.0" prefHeight="726.0" prefWidth="461.0" style="-fx-background-radius: 0 15 15 0;">
          <children>
@@ -28,6 +27,16 @@
                   <Font name="Padauk Book Bold" size="35.0" />
                </font>
             </Label>
+            <ImageView fitHeight="304.0" fitWidth="394.0" layoutX="44.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/Signin white shape.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="303.0" fitWidth="380.0" layoutX="48.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/sign in.gif" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <ImageView fitHeight="24.0" fitWidth="114.0" layoutX="27.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
@@ -35,48 +44,48 @@
             <Image url="@../assets/logo/BookWorm logo 2.png" />
          </image>
       </ImageView>
-      <Label layoutX="48.0" layoutY="97.0" text="Create your account" textFill="#3d008a">
+      <Label layoutX="68.0" layoutY="102.0" text="Create your account" textFill="#3d008a">
          <font>
             <Font name="Padauk Book Bold" size="29.0" />
          </font>
       </Label>
-      <TextField fx:id="txtFirstName" layoutX="78.0" layoutY="238.0" prefHeight="39.0" prefWidth="209.0" style="-fx-background-radius: 5;" />
-      <TextField fx:id="txtLastName" layoutX="343.0" layoutY="238.0" prefHeight="39.0" prefWidth="209.0" style="-fx-background-radius: 5;" />
-      <TextField fx:id="txtUsername" layoutX="78.0" layoutY="326.0" prefHeight="39.0" prefWidth="191.0" style="-fx-background-radius: 5;" />
-      <TextField fx:id="txtEmail" layoutX="78.0" layoutY="411.0" prefHeight="39.0" prefWidth="303.0" style="-fx-background-radius: 5;" />
-      <Label layoutX="78.0" layoutY="205.0" text="Entter your first name" textFill="#3d008a">
+      <TextField fx:id="txtFirstName" layoutX="99.0" layoutY="238.0" prefHeight="39.0" prefWidth="209.0" style="-fx-background-radius: 5;" />
+      <TextField fx:id="txtLastName" layoutX="364.0" layoutY="238.0" prefHeight="39.0" prefWidth="209.0" style="-fx-background-radius: 5;" />
+      <TextField fx:id="txtUsername" layoutX="99.0" layoutY="326.0" prefHeight="39.0" prefWidth="191.0" style="-fx-background-radius: 5;" />
+      <TextField fx:id="txtEmail" layoutX="99.0" layoutY="411.0" prefHeight="39.0" prefWidth="303.0" style="-fx-background-radius: 5;" />
+      <Label layoutX="99.0" layoutY="205.0" text="Entter your first name" textFill="#3d008a">
          <font>
             <Font name="Padauk Book Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="343.0" layoutY="205.0" text="Entter your last name" textFill="#3d008a">
+      <Label layoutX="364.0" layoutY="205.0" text="Entter your last name" textFill="#3d008a">
          <font>
             <Font name="Padauk Book Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="78.0" layoutY="293.0" text="Entter your username" textFill="#3d008a">
+      <Label layoutX="99.0" layoutY="293.0" text="Entter your username" textFill="#3d008a">
          <font>
             <Font name="Padauk Book Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="78.0" layoutY="379.0" text="Entter your e-mail" textFill="#3d008a">
+      <Label layoutX="99.0" layoutY="379.0" text="Entter your e-mail" textFill="#3d008a">
          <font>
             <Font name="Padauk Book Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="78.0" layoutY="467.0" text="Password" textFill="#3d008a">
+      <Label layoutX="99.0" layoutY="467.0" text="Password" textFill="#3d008a">
          <font>
             <Font name="Padauk Book Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="334.0" layoutY="467.0" text="Repeat password" textFill="#3d008a">
+      <Label layoutX="355.0" layoutY="467.0" text="Repeat password" textFill="#3d008a">
          <font>
             <Font name="Padauk Book Bold" size="14.0" />
          </font>
       </Label>
-      <PasswordField fx:id="txtPassword" layoutX="78.0" layoutY="499.0" prefHeight="39.0" prefWidth="191.0" style="-fx-background-radius: 5;" />
-      <PasswordField fx:id="txtRepeatPassword" layoutX="334.0" layoutY="499.0" prefHeight="39.0" prefWidth="191.0" style="-fx-background-radius: 5;" />
-      <JFXButton layoutX="81.0" layoutY="583.0" onAction="#btnSingInOnAction" prefHeight="39.0" prefWidth="191.0" styleClass="button-with-stroke" stylesheets="@../style/StyleSheet.css" text="Sign-in">
+      <PasswordField fx:id="txtPassword" layoutX="99.0" layoutY="499.0" prefHeight="39.0" prefWidth="191.0" style="-fx-background-radius: 5;" />
+      <PasswordField fx:id="txtRepeatPassword" layoutX="355.0" layoutY="499.0" prefHeight="39.0" prefWidth="191.0" style="-fx-background-radius: 5;" />
+      <JFXButton layoutX="102.0" layoutY="583.0" onAction="#btnSingInOnAction" prefHeight="39.0" prefWidth="191.0" styleClass="button-with-stroke" stylesheets="@../style/StyleSheet.css" text="Sign-in">
          <ripplerFill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>

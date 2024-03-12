@@ -4,14 +4,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
 public class UserSignInFormController {
 
     @FXML
-    private TextField txtEmail;
-
+    public AnchorPane pane;
     @FXML
-    private TextField txtFirstName;
+    public TextField txtFirstName;
+    @FXML
+    public TextField txtEmail;
 
     @FXML
     private TextField txtLastName;
