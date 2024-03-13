@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="726.0" prefWidth="1187.0" style="-fx-background-radius: 15;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminLoginFormController">
+<AnchorPane fx:id="pane" prefHeight="726.0" prefWidth="1187.0" style="-fx-background-radius: 15;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminLoginFormController">
    <children>
       <TextField fx:id="txtEmail" layoutX="128.0" layoutY="303.0" prefHeight="47.0" prefWidth="396.0" promptText="example@gmail.com" style="-fx-background-radius: 10;">
          <font>
@@ -37,12 +37,12 @@
          <children>
             <ImageView fitHeight="726.0" fitWidth="476.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/image/admin%20signin%20page%20.png" />
+                  <Image url="@../assets/image/admin signin page .png" />
                </image>
             </ImageView>
             <ImageView fitHeight="241.0" fitWidth="321.0" layoutX="87.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets/image/adminsignin%20image.png" />
+                  <Image url="@../assets/image/adminsignin image.png" />
                </image>
             </ImageView>
          </children>
