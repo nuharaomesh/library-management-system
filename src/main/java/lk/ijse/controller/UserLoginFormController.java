@@ -24,7 +24,7 @@ public class UserLoginFormController {
     @FXML
     void btnLoginOnAction(ActionEvent event) throws IOException {
         Stage stage = (Stage) this.pane.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/usermain_form.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/user_main_form.fxml"))));
         stage.centerOnScreen();
         stage.show();
     }

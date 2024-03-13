@@ -14,18 +14,14 @@ public class UserSignInFormController {
     public TextField txtFirstName;
     @FXML
     public TextField txtEmail;
-
     @FXML
-    private TextField txtLastName;
-
+    public TextField txtLastName;
     @FXML
-    private PasswordField txtPassword;
-
+    public TextField txtUsername;
     @FXML
-    private PasswordField txtRepeatPassword;
-
+    public PasswordField txtPassword;
     @FXML
-    private TextField txtUsername;
+    public PasswordField txtRepeatPassword;
 
     @FXML
     void btnSingInOnAction(ActionEvent event) {

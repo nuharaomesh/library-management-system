@@ -9,11 +9,13 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
@@ -35,7 +37,7 @@
             <Font name="Padauk Book Bold" size="33.0" />
          </font>
       </Label>
-      <Button layoutX="1844.0" layoutY="23.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="53.0" style="-fx-background-radius: 100%; -fx-background-color: white;" textFill="#e1e1e1">
+      <Button layoutX="1844.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnUserAccountMngOnAction" prefHeight="53.0" prefWidth="53.0" style="-fx-background-radius: 100%; -fx-background-color: white;" textFill="#e1e1e1">
          <graphic>
             <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -45,7 +47,7 @@
          </graphic>
       </Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="894.0" layoutX="14.0" layoutY="172.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="954.0" />
-      <Label layoutX="1667.0" layoutY="34.0" text="Mar 13 2024" textFill="#575757">
+      <Label fx:id="lblDate" layoutX="1597.0" layoutY="34.0" textFill="#575757">
          <font>
             <Font name="Padauk Book Bold" size="19.0" />
          </font>
@@ -190,10 +192,10 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView fx:id="tableOnReading" layoutX="6.0" layoutY="58.0" prefHeight="306.0" prefWidth="495.0" style="-fx-background-color: #e4e4e4;">
+                        <TableView fx:id="tableOnReading" layoutX="6.0" layoutY="104.0" prefHeight="260.0" prefWidth="495.0" style="-fx-background-color: #e4e4e4;">
                           <columns>
                             <TableColumn fx:id="colBookId" prefWidth="131.0" text="Book ID" />
-                            <TableColumn fx:id="colTitle" prefWidth="208.0" text="Title" />
+                            <TableColumn fx:id="colOnReadingBKTitle" prefWidth="208.0" text="Title" />
                               <TableColumn fx:id="colDueDate" prefWidth="155.0" text="Due Date" />
                           </columns>
                         </TableView>
@@ -312,5 +314,74 @@
           </Tab>
         </tabs>
       </TabPane>
+      <Pane fx:id="userSettingPane" layoutX="1653.0" layoutY="85.0" prefHeight="238.0" prefWidth="253.0" style="-fx-background-color: white; -fx-background-radius: 0 0 10 10;">
+         <effect>
+            <DropShadow height="16.43" offsetY="5.0" radius="5.8925" width="9.14">
+               <color>
+                  <Color opacity="0.2068965584039688" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Label layoutX="81.0" layoutY="10.0" text="Privacy Setting" textFill="#545252">
+               <font>
+                  <Font name="Padauk Book Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="26.0" fitWidth="19.0" layoutX="53.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo/Security Configuration.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="TOP_LEFT" layoutX="18.0" layoutY="62.0" onAction="#btnEditProfileOnAction" prefHeight="30.0" prefWidth="217.0" text="  Edit Profile" textFill="#000000c8">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/logo/Edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Padauk Book Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="TOP_LEFT" layoutX="19.0" layoutY="104.0" onAction="#btnChangePasswordOnAction" prefHeight="30.0" prefWidth="217.0" text="  Change password" textFill="#000000c8">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/logo/Lock.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Padauk Book Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="TOP_LEFT" layoutX="19.0" layoutY="146.0" onAction="#btnSDeleteAccountOnAction" prefHeight="30.0" prefWidth="217.0" text="  Delete account" textFill="#000000c8">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/logo/Delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Padauk Book Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="6.0" layoutY="189.0" onAction="#btnLogoutOnAction" prefHeight="42.0" prefWidth="241.0" style="-fx-background-color: #0001;" text="Log out">
+               <font>
+                  <Font name="Padauk Book Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/logo/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
