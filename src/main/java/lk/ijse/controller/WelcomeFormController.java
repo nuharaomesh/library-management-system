@@ -13,8 +13,9 @@ public class WelcomeFormController {
     public AnchorPane pane;
 
     @FXML
-    void btnAdminOnAction(ActionEvent event) {
-
+    void btnAdminOnAction(ActionEvent event) throws IOException {
+        this.pane.getChildren().clear();
+        this.pane.getChildren().add(FXMLLoader.load(getClass().getResource("/view/admin_login_form.fxml")));
     }
 
     @FXML
