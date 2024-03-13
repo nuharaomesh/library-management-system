@@ -1,38 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="797.0" prefWidth="1002.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminLoginFormController">
+<AnchorPane prefHeight="726.0" prefWidth="1187.0" style="-fx-background-radius: 15;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminLoginFormController">
    <children>
-      <TextField layoutX="127.0" layoutY="327.0" prefHeight="47.0" prefWidth="396.0" promptText="Enter your name" style="-fx-background-radius: 10;">
+      <TextField fx:id="txtEmail" layoutX="128.0" layoutY="303.0" prefHeight="47.0" prefWidth="396.0" promptText="example@gmail.com" style="-fx-background-radius: 10;">
          <font>
             <Font name="System Bold" size="13.0" />
          </font></TextField>
-      <PasswordField layoutX="127.0" layoutY="422.0" prefHeight="47.0" prefWidth="397.0" promptText="Enter your password" style="-fx-background-radius: 10;" />
-      <JFXButton buttonType="RAISED" layoutX="169.0" layoutY="504.0" prefHeight="47.0" prefWidth="312.0" style="-fx-background-color: blue; -fx-background-radius: 25;" text="Log-in" textFill="WHITE">
+      <PasswordField fx:id="txtPassword" layoutX="128.0" layoutY="398.0" prefHeight="47.0" prefWidth="397.0" promptText="password" style="-fx-background-radius: 10;" />
+      <JFXButton buttonType="RAISED" layoutX="128.0" layoutY="501.0" onAction="#btnLoginOnAction" prefHeight="47.0" prefWidth="397.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #1d00cc 0.0%, #a718ff 100.0%);" text="Log-in" textFill="WHITE">
          <font>
             <Font name="Ubuntu Bold" size="16.0" />
          </font>
       </JFXButton>
-      <Label layoutX="894.0" layoutY="52.0" text="Sign in" textFill="#041979">
+      <Label layoutX="135.0" layoutY="280.0" text="Enter your e-mail address" textFill="#000000a4">
          <font>
-            <Font name="Ubuntu Bold" size="15.0" />
+            <Font name="Ubuntu Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="131.0" layoutY="304.0" text="username">
+      <Label layoutX="135.0" layoutY="377.0" text="Enter your password" textFill="#000000a4">
+         <font>
+            <Font name="Ubuntu Bold" size="13.0" />
+         </font>
+      </Label>
+      <Pane layoutX="711.0" prefHeight="726.0" prefWidth="476.0" style="-fx-background-radius: 15;">
+         <children>
+            <ImageView fitHeight="726.0" fitWidth="476.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/admin%20signin%20page%20.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="241.0" fitWidth="321.0" layoutX="87.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/adminsignin%20image.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="52.0" layoutY="74.0" text="Log to System" textFill="#5b0475">
+         <font>
+            <Font name="Ubuntu Bold" size="44.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="140.0" text="Please enter your login information" textFill="#230163ca">
+         <font>
+            <Font name="Ubuntu Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="621.0" layoutY="15.0" onAction="#btnSignInOnAction" prefHeight="29.0" prefWidth="74.0" style="-fx-background-color: rgba(60, 10, 123, 1);" text="Sign in" textFill="WHITE">
+         <font>
+            <Font name="Ubuntu Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="262.0" layoutY="578.0" onAction="#btnForgetPasswordOnAction" prefHeight="29.0" prefWidth="128.0" style="-fx-background-color: white;" text="Forget Password ?" textFill="#2ea3f2">
          <font>
             <Font name="Ubuntu" size="13.0" />
          </font>
-      </Label>
-      <Label layoutX="131.0" layoutY="401.0" text="password">
+      </JFXButton>
+      <CheckBox layoutX="131.0" layoutY="457.0" mnemonicParsing="false" onAction="#ckBoxShowPassword" text="Show password" textFill="#000000c1">
          <font>
-            <Font name="Ubuntu" size="13.0" />
+            <Font name="Ubuntu" size="12.0" />
          </font>
-      </Label>
+      </CheckBox>
    </children>
 </AnchorPane>
