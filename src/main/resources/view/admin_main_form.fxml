@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.controller.AdminMainFormController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: DDDDDD;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminMainFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="71.0" layoutX="15.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1891.0" />
+      <Pane layoutX="14.0" layoutY="103.0" prefHeight="963.0" prefWidth="66.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <effect>
+            <DropShadow height="16.43" offsetX="1.0" offsetY="1.0" radius="5.15" spread="0.06" width="6.17">
+               <color>
+                  <Color opacity="0.18390804529190063" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Button layoutX="11.0" layoutY="51.0" mnemonicParsing="false" onAction="#btnDasjBoardOnAction" prefHeight="44.0" prefWidth="45.0" style="-fx-background-radius: 10;" />
+            <Button layoutX="11.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnBookOnAction" prefHeight="44.0" prefWidth="45.0" style="-fx-background-radius: 10;" />
+            <Button layoutX="11.0" layoutY="174.0" mnemonicParsing="false" onAction="#btnBranchOnAction" prefHeight="44.0" prefWidth="45.0" style="-fx-background-radius: 10;" />
+         </children>
+      </Pane>
+      <AnchorPane fx:id="pane" layoutX="84.0" layoutY="87.0" prefHeight="993.0" prefWidth="1834.0" style="-fx-background-radius: 10;" />
+      <ImageView fitHeight="52.0" fitWidth="153.0" layoutX="25.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo/main%20page%20logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="759.0" layoutY="34.0" text="Hello!," textFill="#969697">
+         <font>
+            <Font name="Ubuntu Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="859.0" layoutY="34.0" text="Omesh" textFill="#0000b2">
+         <font>
+            <Font name="Ubuntu Bold" size="28.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
