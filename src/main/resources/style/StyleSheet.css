@@ -1,3 +1,5 @@
-.button-with-stroke {
-    -fx-border-color: 19px solid 7D12FF; /* Set the border color */
+.label-with-lilyscript {
+    -fx-font-family: 'LilyScript One';
+    -fx-font-size: 20;
 }
+
