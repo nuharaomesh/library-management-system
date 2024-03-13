@@ -12,7 +12,7 @@ public class UserMainFormController {
     @FXML
     private ComboBox<?> cmbCategory;
     @FXML
-    private TableColumn<?, ?> colAuhtor;
+    private TableColumn<?, ?> colAuthor;
     @FXML
     private TableColumn<?, ?> colBookId;
     @FXML
@@ -109,5 +109,11 @@ public class UserMainFormController {
     @FXML
     void btnLogoutOnAction(ActionEvent event) {
 
+    }
+
+    @FXML
+    void btnUserSettingBackOnAction(ActionEvent event) {
+
+        this.userSettingPane.setVisible(false);
     }
 }
