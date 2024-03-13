@@ -31,7 +31,8 @@ public class UserLoginFormController {
 
     @FXML
     void btnSignInOnAction(ActionEvent event) throws IOException {
-
+        this.pane.getChildren().clear();
+        this.pane.getChildren().add(FXMLLoader.load(getClass().getResource("/view/user_signin_form.fxml")));
     }
 
     public void btnForgetPasswordOnAction(ActionEvent actionEvent) {
