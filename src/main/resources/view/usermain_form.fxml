@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: DDDDDD;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserMainFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="71.0" layoutX="15.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1891.0" />
+      <ImageView fitHeight="52.0" fitWidth="157.0" layoutX="25.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo/main page logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="194.0" layoutY="23.0" text="Hello," textFill="#575757">
+         <font>
+            <Font name="Padauk Book Bold" size="33.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUsername" layoutX="285.0" layoutY="23.0" textFill="#8010e5">
+         <font>
+            <Font name="Padauk Book Bold" size="33.0" />
+         </font>
+      </Label>
+      <Button layoutX="1844.0" layoutY="23.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="53.0" style="-fx-background-radius: 100%; -fx-background-color: white;" textFill="#e1e1e1">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo/user logo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="894.0" layoutX="14.0" layoutY="172.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="954.0" />
+      <Label layoutX="1667.0" layoutY="34.0" text="Mar 13 2024" textFill="#575757">
+         <font>
+            <Font name="Padauk Book Bold" size="19.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblBook" layoutX="33.0" layoutY="236.0" prefHeight="813.0" prefWidth="916.0" style="-fx-background-color: #f5f5f5;">
+        <columns>
+          <TableColumn fx:id="colTitle" prefWidth="221.0" text="Title" />
+          <TableColumn fx:id="colAuhtor" prefWidth="198.0" text="Author" />
+            <TableColumn fx:id="colGenre" prefWidth="192.0" text="Genre" />
+            <TableColumn fx:id="colLanguage" prefWidth="171.0" text="Language" />
+            <TableColumn fx:id="colStatus" prefWidth="133.0" text="Status" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="89.0" layoutX="14.0" layoutY="172.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="954.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8e8e8" height="58.0" layoutX="30.0" layoutY="188.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="923.0" />
+      <Label layoutX="123.0" layoutY="200.0" text="Title" textFill="#5c03ae">
+         <font>
+            <Font name="Padauk Book Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="324.0" layoutY="200.0" text="Author" textFill="#5c03ae">
+         <font>
+            <Font name="Padauk Book Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="522.0" layoutY="200.0" text="Genre" textFill="#5c03ae">
+         <font>
+            <Font name="Padauk Book Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="685.0" layoutY="200.0" text="Launguage" textFill="#5c03ae">
+         <font>
+            <Font name="Padauk Book Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="854.0" layoutY="200.0" text="Status" textFill="#5c03ae">
+         <font>
+            <Font name="Padauk Book Bold" size="21.0" />
+         </font>
+      </Label>
+      <Pane layoutX="15.0" layoutY="101.0" prefHeight="58.0" prefWidth="579.0" style="-fx-background-color: white; -fx-background-radius: 50; -fx-border-color: gray; -fx-border-radius: 50;">
+         <children>
+            <TextField fx:id="txtSearchProperty" layoutX="14.0" layoutY="2.0" prefHeight="53.0" prefWidth="473.0" promptText="Search for books" style="-fx-background-color: white; -fx-background-radius: 15;">
+               <font>
+                  <Font name="Padauk Book Bold" size="22.0" />
+               </font>
+            </TextField>
+            <Button layoutX="505.0" layoutY="3.0" mnemonicParsing="false" onAction="#btnSearchBookOnAction" prefHeight="52.0" prefWidth="53.0" style="-fx-background-radius: 100%; -fx-background-color: white;">
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/logo/Search logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="621.0" layoutY="101.0" prefHeight="58.0" prefWidth="347.0" style="-fx-background-color: white; -fx-background-radius: 50; -fx-border-color: gray; -fx-border-radius: 50;">
+         <children>
+            <ComboBox fx:id="cmbCategory" layoutX="23.0" layoutY="3.0" onAction="#cmbCategoryOnAction" prefHeight="53.0" prefWidth="302.0" promptText="Category" style="-fx-background-color: white;" />
+         </children>
+      </Pane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="532.0" layoutX="983.0" layoutY="101.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="923.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="421.0" layoutX="983.0" layoutY="645.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="923.0" />
+      <Pane layoutX="1484.0" layoutY="146.0" prefHeight="394.0" prefWidth="400.0" style="-fx-background-color: E2E2E2; -fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="368.0" fitWidth="368.0" layoutX="16.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/0b285bdc-d88d-4d91-acbe-f7eaddb7e25f.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="1004.0" layoutY="114.0" text="Get your book" textFill="#797979">
+         <font>
+            <Font name="Padauk Book Bold" size="25.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="993.0" layoutY="571.0" onAction="#btnBorrowBookOnAction" prefHeight="52.0" prefWidth="463.0" style="-fx-background-color: rgba(72, 0, 163, 1); -fx-background-radius: 5;" text="Take a book" textFill="WHITE">
+         <font>
+            <Font name="Padauk Book Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="1210.0" layoutY="205.0" text="Title" textFill="#797979">
+         <font>
+            <Font name="Padauk Book Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="1069.0" layoutY="418.0" text="Due Date" textFill="#797979">
+         <font>
+            <Font name="Padauk Book Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="1323.0" layoutY="418.0" text="Category" textFill="#797979">
+         <font>
+            <Font name="Padauk Book Bold" size="16.0" />
+         </font>
+      </Label>
+      <Pane layoutX="991.0" layoutY="231.0" prefHeight="103.0" prefWidth="487.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="-2.0" layoutY="16.0" prefHeight="71.0" prefWidth="487.0">
+               <children>
+                  <Label fx:id="lblBookTitle">
+                     <font>
+                        <Font name="Impact" size="50.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutX="986.0" layoutY="465.0" prefHeight="62.0" prefWidth="233.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="3.0" layoutY="2.0" prefHeight="58.0" prefWidth="227.0">
+               <children>
+                  <Label fx:id="lblDueDate" textFill="#40099a">
+                     <font>
+                        <Font name="Padauk Book Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutX="1238.0" layoutY="465.0" prefHeight="62.0" prefWidth="233.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="3.0" layoutY="2.0" prefHeight="58.0" prefWidth="227.0">
+               <children>
+                  <Label fx:id="lblCategory" textFill="#40099a">
+                     <font>
+                        <Font name="Padauk Book Bold" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <TabPane layoutX="993.0" layoutY="656.0" prefHeight="400.0" prefWidth="902.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="On Reading">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableOnReading" layoutX="6.0" layoutY="58.0" prefHeight="306.0" prefWidth="495.0" style="-fx-background-color: #e4e4e4;">
+                          <columns>
+                            <TableColumn fx:id="colBookId" prefWidth="131.0" text="Book ID" />
+                            <TableColumn fx:id="colTitle" prefWidth="208.0" text="Title" />
+                              <TableColumn fx:id="colDueDate" prefWidth="155.0" text="Due Date" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="552.0" layoutY="176.0" text="Borrowed Date" textFill="#797979">
+                           <font>
+                              <Font name="Padauk Book Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXButton layoutX="510.0" layoutY="312.0" onAction="#btnReturnBookOnAction" prefHeight="52.0" prefWidth="384.0" style="-fx-background-color: rgba(72, 0, 163, 1); -fx-background-radius: 5;" text="Reurn Book" textFill="WHITE">
+                           <font>
+                              <Font name="Padauk Book Bold" size="17.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="763.0" layoutY="176.0" text="Branch name" textFill="#797979">
+                           <font>
+                              <Font name="Padauk Book Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="687.0" layoutY="16.0" text="Title" textFill="#797979">
+                           <font>
+                              <Font name="Padauk Book Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="510.0" layoutY="50.0" prefHeight="103.0" prefWidth="385.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="3.0" layoutY="16.0" prefHeight="71.0" prefWidth="379.0">
+                                 <children>
+                                    <Label fx:id="lblBorrowedBkTitle">
+                                       <font>
+                                          <Font name="Impact" size="50.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Pane>
+                        <Label fx:id="lblBorrowedDate" layoutX="545.0" layoutY="222.0" textFill="#40099a">
+                           <font>
+                              <Font name="Padauk Book Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblBranchName" layoutX="758.0" layoutY="222.0" textFill="#40099a">
+                           <font>
+                              <Font name="Padauk Book Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="71.0" layoutX="3.0" layoutY="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="504.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="58.0" layoutX="6.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="495.0" />
+                        <Label layoutX="44.0" layoutY="28.0" text="Book ID" textFill="#5c03ae">
+                           <font>
+                              <Font name="Padauk Book Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="223.0" layoutY="28.0" text="Title" textFill="#5c03ae">
+                           <font>
+                              <Font name="Padauk Book Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="387.0" layoutY="28.0" text="Due Date" textFill="#5c03ae">
+                           <font>
+                              <Font name="Padauk Book Bold" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Transaction history">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblTransaction" layoutX="6.0" layoutY="57.0" prefHeight="306.0" prefWidth="891.0" style="-fx-background-color: #e8e8e8;">
+                          <columns>
+                            <TableColumn fx:id="colTRBookId" prefWidth="111.0" text="Book ID" />
+                            <TableColumn fx:id="colTRBranch" prefWidth="143.0" text="branch" />
+                              <TableColumn fx:id="colTRTitle" prefWidth="205.0" text="Title" />
+                              <TableColumn fx:id="colTRCategory" prefWidth="134.0" text="Category" />
+                              <TableColumn fx:id="colTRBorrowedDate" prefWidth="151.0" text="Borrowed date" />
+                              <TableColumn fx:id="colTRReturnedDate" prefWidth="146.0" text="Returned date" />
+                          </columns>
+                        </TableView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="71.0" layoutX="1.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="896.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8e8e8" height="58.0" layoutX="6.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="890.0" />
+                        <Label layoutX="33.0" layoutY="25.0" text="Book ID" textFill="#5c03ae">
+                           <font>
+                              <Font name="Padauk Book Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="164.0" layoutY="25.0" text="Branch" textFill="#5c03ae">
+                           <font>
+                              <Font name="Padauk Book Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="350.0" layoutY="25.0" text="Title" textFill="#5c03ae">
+                           <font>
+                              <Font name="Padauk Book Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="502.0" layoutY="25.0" text="Category" textFill="#5c03ae">
+                           <font>
+                              <Font name="Padauk Book Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="618.0" layoutY="25.0" text="Borrowed date" textFill="#5c03ae">
+                           <font>
+                              <Font name="Padauk Book Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="771.0" layoutY="25.0" text="Returned date" textFill="#5c03ae">
+                           <font>
+                              <Font name="Padauk Book Bold" size="17.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
