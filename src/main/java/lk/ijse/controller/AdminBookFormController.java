@@ -60,9 +60,13 @@ public class AdminBookFormController {
     @FXML
     private TextField txtNewBookTitle;
 
-    @FXML
-    void btnBookAddOnAction(ActionEvent event) {
+    public void initialize() {
+        setPaneVisibleFalse();
+    }
 
+    private void setPaneVisibleFalse() {
+        paneBookAdd.setVisible(false);
+        paneBookUpdateForm.setVisible(false);
     }
 
     @FXML
@@ -76,27 +80,32 @@ public class AdminBookFormController {
     }
 
     @FXML
-    void btnUpdateOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    void btnBookUpdateBackOnAction(ActionEvent event) {
-
-    }
-
-    @FXML
     void btnBookUpdateOnAction(ActionEvent event) {
-
+        //update books
     }
 
     @FXML
     void btnBookAddingOnAction(ActionEvent event) {
+        //add new books
+    }
 
+    @FXML
+    void btnBookAddOnAction(ActionEvent event) {
+        paneBookAdd.setVisible(true);
+    }
+
+    @FXML
+    void btnUpdateOnAction(ActionEvent event) {
+        paneBookUpdateForm.setVisible(true);
+    }
+
+    @FXML
+    void btnBookUpdateBackOnAction(ActionEvent event) {
+        paneBookUpdateForm.setVisible(false);
     }
 
     @FXML
     void btnBookAddingBackOnAction(ActionEvent event) {
-
+        paneBookAdd.setVisible(false);
     }
 }
