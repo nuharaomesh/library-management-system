@@ -11,7 +11,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: DDDDDD;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminMainFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="71.0" layoutX="15.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1891.0" />
@@ -24,25 +23,61 @@
             </DropShadow>
          </effect>
          <children>
-            <Button layoutX="11.0" layoutY="51.0" mnemonicParsing="false" onAction="#btnDasjBoardOnAction" prefHeight="44.0" prefWidth="45.0" style="-fx-background-radius: 10;" />
-            <Button layoutX="11.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnBookOnAction" prefHeight="44.0" prefWidth="45.0" style="-fx-background-radius: 10;" />
-            <Button layoutX="11.0" layoutY="174.0" mnemonicParsing="false" onAction="#btnBranchOnAction" prefHeight="44.0" prefWidth="45.0" style="-fx-background-radius: 10;" />
+            <Button fx:id="btnDashboard" layoutX="8.0" layoutY="59.0" mnemonicParsing="false" onAction="#btnDashBoardOnAction" onMousePressed="#btnDashboardMP" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #7E00BE;">
+               <graphic>
+                  <ImageView fx:id="imgDashboard" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/logo/dashboard%20white.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnBook" layoutX="8.0" layoutY="128.0" mnemonicParsing="false" onAction="#btnBookOnAction" onMousePressed="#btnBookMP" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white;">
+               <graphic>
+                  <ImageView fx:id="imgBook" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/logo/book%20purple.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnBranch" layoutX="8.0" layoutY="199.0" mnemonicParsing="false" onAction="#btnBranchOnAction" onMousePressed="#btnBranchMP" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white;">
+               <graphic>
+                  <ImageView fx:id="imgBranch" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/logo/branch%20purple.png" />
+                     </image></ImageView>
+               </graphic>
+            </Button>
          </children>
       </Pane>
       <AnchorPane fx:id="pane" layoutX="84.0" layoutY="87.0" prefHeight="993.0" prefWidth="1834.0" style="-fx-background-radius: 10;" />
       <ImageView fitHeight="52.0" fitWidth="153.0" layoutX="25.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets/logo/main%20page%20logo.png" />
+            <Image url="@../assets/logo/main page logo.png" />
          </image>
       </ImageView>
-      <Label layoutX="759.0" layoutY="34.0" text="Hello!," textFill="#969697">
+      <Label layoutX="269.0" layoutY="34.0" text="Hello!," textFill="#969697">
          <font>
             <Font name="Ubuntu Bold" size="28.0" />
          </font>
       </Label>
-      <Label layoutX="859.0" layoutY="34.0" text="Omesh" textFill="#0000b2">
+      <Label fx:id="lblAdminName" layoutX="369.0" layoutY="34.0" textFill="#0000b2">
          <font>
             <Font name="Ubuntu Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="1840.0" layoutY="24.0" mnemonicParsing="false" onAction="#btnAdminAccountMng" prefHeight="52.0" prefWidth="60.0" style="-fx-background-radius: 100%; -fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo/user%20logo.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="lblDate" layoutX="1713.0" layoutY="41.0" textFill="#4b4b4d">
+         <font>
+            <Font name="Ubuntu Bold" size="15.0" />
          </font>
       </Label>
    </children>
