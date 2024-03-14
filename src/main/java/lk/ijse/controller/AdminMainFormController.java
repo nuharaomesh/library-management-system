@@ -34,7 +34,7 @@ public class AdminMainFormController {
     private Label lblDate;
 
     public void initialize() throws IOException {
-
+        loadPage("/view/admin_dashboard_form.fxml");
     }
 
     @FXML
@@ -55,6 +55,11 @@ public class AdminMainFormController {
     @FXML
     void btnAdminAccountMng(ActionEvent event) {
 
+    }
+
+    private void loadPage(String path) throws IOException {
+        this.pane.getChildren().clear();
+        this.pane.getChildren().add(FXMLLoader.load(getClass().getResource(path)));
     }
 
     @FXML
