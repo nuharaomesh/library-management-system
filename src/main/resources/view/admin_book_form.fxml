@@ -9,10 +9,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="993.0" prefWidth="1834.0" style="-fx-background-color: DDDDDD;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminBookFormController">
    <children>
@@ -121,11 +121,6 @@
             <Font name="Ubuntu Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblBookTitle" layoutX="1236.0" layoutY="173.0" text="Madol duwa" textFill="#4f07c3">
-         <font>
-            <Font name="Impact" size="65.0" />
-         </font>
-      </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="36.0" layoutX="971.0" layoutY="371.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="847.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dddddd" height="58.0" layoutX="980.0" layoutY="332.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="831.0" />
       <Label layoutX="1002.0" layoutY="351.0" text="Branch-ID" textFill="#4f07c3">
@@ -158,5 +153,18 @@
             <Image url="@../assets/logo/booklogoAdminBookpage.png" />
          </image>
       </ImageView>
+      <Pane layoutX="981.0" layoutY="175.0" prefHeight="108.0" prefWidth="831.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="5.0" layoutY="4.0" prefHeight="100.0" prefWidth="821.0">
+               <children>
+                  <Label fx:id="lblBookTitle" textFill="#4f07c3">
+                     <font>
+                        <Font name="Impact" size="65.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
