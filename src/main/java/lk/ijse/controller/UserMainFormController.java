@@ -2,13 +2,21 @@ package lk.ijse.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class UserMainFormController {
 
     @FXML
     public Pane userSettingPane;
+    @FXML
+    public AnchorPane root;
     @FXML
     private ComboBox<?> cmbCategory;
     @FXML
@@ -107,8 +115,10 @@ public class UserMainFormController {
     }
 
     @FXML
-    void btnLogoutOnAction(ActionEvent event) {
-//        this.
+    void btnLogoutOnAction(ActionEvent event) throws IOException {
+        Stage stage = (Stage) this.root.getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/start_form.fxml"))));
+        stage.centerOnScreen();
     }
 
     @FXML
