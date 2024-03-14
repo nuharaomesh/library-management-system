@@ -61,14 +61,16 @@ public class AdminMainFormController {
         paneAdminSettings.setVisible(true);
     }
 
-    private void loadPage(String path) throws IOException {
-        this.pane.getChildren().clear();
-        this.pane.getChildren().add(FXMLLoader.load(getClass().getResource(path)));
-    }
+
 
     @FXML
     void btnChangePasswordOnAction(ActionEvent event) {
 
+    }
+
+    @FXML
+    void btnLogoutOnAction(ActionEvent event) throws IOException {
+        loadPage("/view/admin_login_form.fxml");
     }
 
     @FXML
@@ -109,5 +111,10 @@ public class AdminMainFormController {
         imgBook.setImage(new Image("/assets/logo/book purple.png"));
         btnBranch.setStyle("-fx-background-color: #7E00BE");
         imgBranch.setImage(new Image("/assets/logo/branch white.png"));
+    }
+
+    private void loadPage(String path) throws IOException {
+        this.pane.getChildren().clear();
+        this.pane.getChildren().add(FXMLLoader.load(getClass().getResource(path)));
     }
 }
