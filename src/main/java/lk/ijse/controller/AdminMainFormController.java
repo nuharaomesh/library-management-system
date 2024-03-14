@@ -38,8 +38,8 @@ public class AdminMainFormController {
     }
 
     @FXML
-    void btnDashBoardOnAction(ActionEvent event) {
-
+    void btnDashBoardOnAction(ActionEvent event) throws IOException {
+        loadPage("/view/admin_dashboard_form.fxml");
     }
 
     @FXML
