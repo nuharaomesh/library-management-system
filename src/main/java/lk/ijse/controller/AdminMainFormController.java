@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 
@@ -32,8 +33,11 @@ public class AdminMainFormController {
     private Button btnDashboard;
     @FXML
     private Label lblDate;
+    @FXML
+    private Pane paneAdminSettings;
 
     public void initialize() throws IOException {
+        paneAdminSettings.setVisible(false);
         loadPage("/view/admin_dashboard_form.fxml");
     }
 
@@ -54,12 +58,27 @@ public class AdminMainFormController {
 
     @FXML
     void btnAdminAccountMng(ActionEvent event) {
-
+        paneAdminSettings.setVisible(true);
     }
 
     private void loadPage(String path) throws IOException {
         this.pane.getChildren().clear();
         this.pane.getChildren().add(FXMLLoader.load(getClass().getResource(path)));
+    }
+
+    @FXML
+    void btnChangePasswordOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnEditProfileOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnAdminSettingBackOnAction(ActionEvent event) {
+        paneAdminSettings.setVisible(false);
     }
 
     @FXML
