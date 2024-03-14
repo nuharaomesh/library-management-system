@@ -388,7 +388,7 @@
                <graphic>
                   <ImageView fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../assets/logo/back%20button.png" />
+                        <Image url="@../assets/logo/back button.png" />
                      </image>
                   </ImageView>
                </graphic>
