@@ -28,7 +28,7 @@ public class AdminLoginFormController {
     @FXML
     void btnLoginOnAction(ActionEvent event) throws IOException {
         Stage stage = (Stage) this.pane.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/admin_dashboard_form.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/admin_main_form.fxml"))));
         stage.centerOnScreen();
         stage.show();
     }
