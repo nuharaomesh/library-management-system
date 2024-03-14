@@ -48,8 +48,8 @@ public class AdminMainFormController {
     }
 
     @FXML
-    void btnBranchOnAction(ActionEvent event) {
-
+    void btnBranchOnAction(ActionEvent event) throws IOException {
+        loadPage("/view/admin_branch_form.fxml");
     }
 
     @FXML
