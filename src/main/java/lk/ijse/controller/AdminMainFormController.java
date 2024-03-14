@@ -43,8 +43,8 @@ public class AdminMainFormController {
     }
 
     @FXML
-    void btnBookOnAction(ActionEvent event) {
-
+    void btnBookOnAction(ActionEvent event) throws IOException {
+        loadPage("/view/admin_book_form.fxml");
     }
 
     @FXML
