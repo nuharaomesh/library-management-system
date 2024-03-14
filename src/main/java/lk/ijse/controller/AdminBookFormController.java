@@ -12,6 +12,10 @@ public class AdminBookFormController {
     @FXML
     private ComboBox<?> cmbCategory;
     @FXML
+    private ComboBox<?> cmbNewBranch;
+    @FXML
+    private ComboBox<?> cmbNewCategory;
+    @FXML
     private TableColumn<?, ?> colAddress;
     @FXML
     private TableColumn<?, ?> colAuthor;
@@ -47,6 +51,14 @@ public class AdminBookFormController {
     private TextField txtBookQty;
     @FXML
     private TextField txtBookTitle;
+    @FXML
+    private Pane paneBookUpdateForm;
+    @FXML
+    private TextField txtNewAuthorName;
+    @FXML
+    private TextField txtNewBookQty;
+    @FXML
+    private TextField txtNewBookTitle;
 
     @FXML
     void btnBookAddOnAction(ActionEvent event) {
@@ -65,6 +77,16 @@ public class AdminBookFormController {
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnBookUpdateBackOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnBookUpdateOnAction(ActionEvent event) {
 
     }
 
