@@ -19,8 +19,8 @@
 
 <AnchorPane prefHeight="993.0" prefWidth="1834.0" style="-fx-background-color: DDDDDD;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminDashboardFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="856.0" layoutX="12.0" layoutY="129.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="941.0" />
-      <Pane layoutX="12.0" layoutY="47.0" prefHeight="58.0" prefWidth="676.0" style="-fx-background-color: white; -fx-background-radius: 50; -fx-border-color: gray; -fx-border-radius: 50;">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="856.0" layoutX="12.0" layoutY="125.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="941.0" />
+      <Pane layoutX="12.0" layoutY="40.0" prefHeight="58.0" prefWidth="676.0" style="-fx-background-color: white; -fx-background-radius: 50; -fx-border-color: gray; -fx-border-radius: 50;">
          <children>
             <TextField layoutX="16.0" layoutY="4.0" onAction="#btnSearchUserOnAction" prefHeight="50.0" prefWidth="594.0" promptText="Search for users with user name" style="-fx-background-radius: 50; -fx-background-color: white;">
                <font>
@@ -38,7 +38,7 @@
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="709.0" layoutY="22.0" prefHeight="94.0" prefWidth="244.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+      <Pane layoutX="709.0" layoutY="15.0" prefHeight="94.0" prefWidth="244.0" style="-fx-background-color: white; -fx-background-radius: 10;">
          <effect>
             <DropShadow offsetX="1.0" offsetY="1.0">
                <color>
@@ -65,7 +65,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="963.0" layoutX="970.0" layoutY="22.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="853.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="963.0" layoutX="970.0" layoutY="18.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="853.0">
          <fill>
             <LinearGradient endX="0.7619047619047619" endY="0.9809523809523809" startX="1.0">
                <stops>
@@ -83,8 +83,8 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="418.0" layoutX="970.0" layoutY="567.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="853.0" />
-      <Pane layoutX="970.0" layoutY="22.0" prefHeight="94.0" prefWidth="244.0" style="-fx-background-color: white; -fx-background-radius: 0 0 10 0;">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="418.0" layoutX="970.0" layoutY="563.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="853.0" />
+      <Pane layoutX="970.0" layoutY="18.0" prefHeight="94.0" prefWidth="244.0" style="-fx-background-color: white; -fx-background-radius: 0 0 10 0;">
          <effect>
             <DropShadow offsetX="1.0" offsetY="1.0">
                <color>
@@ -111,7 +111,7 @@
             </ImageView>
          </children>
       </Pane>
-      <TableView fx:id="tblUsers" layoutX="23.0" layoutY="246.0" prefHeight="730.0" prefWidth="920.0" style="-fx-background-color: #ebebeb;">
+      <TableView fx:id="tblUsers" layoutX="23.0" layoutY="242.0" prefHeight="730.0" prefWidth="920.0" style="-fx-background-color: #ebebeb;">
         <columns>
           <TableColumn fx:id="colUserID" prefWidth="134.0" text="User-ID" />
           <TableColumn fx:id="colName" prefWidth="181.0" text="Name" />
@@ -120,34 +120,34 @@
             <TableColumn fx:id="colTel" prefWidth="159.0" text="Tel." />
         </columns>
       </TableView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="21.0" layoutY="241.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="928.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="58.0" layoutX="25.0" layoutY="194.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="916.0" />
-      <Label layoutX="62.0" layoutY="213.0" text="User-ID" textFill="#4805bc">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="21.0" layoutY="237.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="928.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="58.0" layoutX="25.0" layoutY="190.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="916.0" />
+      <Label layoutX="62.0" layoutY="209.0" text="User-ID" textFill="#4805bc">
          <font>
             <Font name="Ubuntu Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="224.0" layoutY="213.0" text="Name" textFill="#4805bc">
+      <Label layoutX="224.0" layoutY="209.0" text="Name" textFill="#4805bc">
          <font>
             <Font name="Ubuntu Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="455.0" layoutY="213.0" text="E-mail" textFill="#4805bc">
+      <Label layoutX="455.0" layoutY="209.0" text="E-mail" textFill="#4805bc">
          <font>
             <Font name="Ubuntu Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="660.0" layoutY="213.0" text="username" textFill="#4805bc">
+      <Label layoutX="660.0" layoutY="209.0" text="username" textFill="#4805bc">
          <font>
             <Font name="Ubuntu Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="844.0" layoutY="213.0" text="Tel." textFill="#4805bc">
+      <Label layoutX="844.0" layoutY="209.0" text="Tel." textFill="#4805bc">
          <font>
             <Font name="Ubuntu Bold" size="18.0" />
          </font>
       </Label>
-      <TableView fx:id="tblUserTransaction" layoutX="979.0" layoutY="684.0" prefHeight="292.0" prefWidth="836.0" style="-fx-background-color: #ebebeb;">
+      <TableView fx:id="tblUserTransaction" layoutX="979.0" layoutY="680.0" prefHeight="292.0" prefWidth="836.0" style="-fx-background-color: #ebebeb;">
         <columns>
           <TableColumn fx:id="colTRBookId" prefWidth="134.0" text="Book-id" />
             <TableColumn fx:id="colTRName" prefWidth="271.0" text="name" />
@@ -155,34 +155,34 @@
             <TableColumn fx:id="colTRReturnDate" prefWidth="202.0" text="return date" />
         </columns>
       </TableView>
-      <Label layoutX="63.0" layoutY="146.0" text="Users" textFill="#280072">
+      <Label layoutX="63.0" layoutY="142.0" text="Users" textFill="#280072">
          <font>
             <Font name="Ubuntu Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="1021.0" layoutY="584.0" text="User Transaction" textFill="#280072">
+      <Label layoutX="1021.0" layoutY="580.0" text="User Transaction" textFill="#280072">
          <font>
             <Font name="Ubuntu Bold" size="24.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="974.0" layoutY="680.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="844.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="58.0" layoutX="979.0" layoutY="637.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="836.0" />
-      <Label layoutX="1004.0" layoutY="656.0" text="Book-ID" textFill="#4805bc">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="974.0" layoutY="676.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="844.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="58.0" layoutX="979.0" layoutY="633.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="836.0" />
+      <Label layoutX="1004.0" layoutY="652.0" text="Book-ID" textFill="#4805bc">
          <font>
             <Font name="Ubuntu Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="1444.0" layoutY="656.0" text="Borrow date" textFill="#4805bc">
+      <Label layoutX="1444.0" layoutY="652.0" text="Borrow date" textFill="#4805bc">
          <font>
             <Font name="Ubuntu Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="1226.0" layoutY="656.0" text="Name" textFill="#4805bc">
+      <Label layoutX="1226.0" layoutY="652.0" text="Name" textFill="#4805bc">
          <font>
             <Font name="Ubuntu Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="1661.0" layoutY="656.0" text="Return date" textFill="#4805bc">
+      <Label layoutX="1661.0" layoutY="652.0" text="Return date" textFill="#4805bc">
          <font>
             <Font name="Ubuntu Bold" size="18.0" />
          </font>
@@ -258,12 +258,12 @@
             <Image url="@../assets/image/92b2373f-ee87-4539-bc01-223f32d20e53.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="28.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="28.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/logo/userlogoadmin.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="986.0" layoutY="586.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="986.0" layoutY="582.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/logo/searchUserTransactionAdmin.png" />
          </image>

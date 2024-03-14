@@ -14,7 +14,7 @@
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: DDDDDD;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminMainFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="71.0" layoutX="15.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1891.0" />
-      <Pane layoutX="14.0" layoutY="103.0" prefHeight="963.0" prefWidth="66.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+      <Pane layoutX="14.0" layoutY="103.0" prefHeight="970.0" prefWidth="66.0" style="-fx-background-color: white; -fx-background-radius: 10;">
          <effect>
             <DropShadow height="16.43" offsetX="1.0" offsetY="1.0" radius="5.15" spread="0.06" width="6.17">
                <color>
