@@ -1,4 +1,6 @@
 package lk.ijse.bo.custom.impl;
 
-public class AdminSignInBOImpl {
+import lk.ijse.bo.custom.AdminSignInBO;
+
+public class AdminSignInBOImpl implements AdminSignInBO {
 }

@@ -1,4 +1,6 @@
 package lk.ijse.bo.custom.impl;
 
-public class AdminDashboardBOImpl {
+import lk.ijse.bo.custom.AdminDashboardBO;
+
+public class AdminDashboardBOImpl implements AdminDashboardBO {
 }
