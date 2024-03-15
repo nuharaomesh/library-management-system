@@ -22,6 +22,7 @@ public class Book {
     private String genre;
     private String Author;
     private boolean returned;
+    private int count;
     @OneToMany (mappedBy = "book")
     private List<Transaction> transactions;
     @ManyToMany (mappedBy = "books")
