@@ -1,4 +1,6 @@
 package lk.ijse.bo.custom;
 
-public interface AdminBookBO {
+import lk.ijse.bo.SuperBO;
+
+public interface AdminBookBO extends SuperBO {
 }

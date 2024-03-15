@@ -1,4 +1,6 @@
 package lk.ijse.bo.custom;
 
-public interface UserDashboardBO {
+import lk.ijse.bo.SuperBO;
+
+public interface UserDashboardBO extends SuperBO {
 }
