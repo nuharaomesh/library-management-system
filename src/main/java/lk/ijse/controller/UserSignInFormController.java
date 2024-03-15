@@ -8,6 +8,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.bo.BOFactory;
+import lk.ijse.bo.custom.UserSignInBo;
+import lk.ijse.dto.UserDTO;
 
 import java.io.IOException;
 
@@ -27,12 +30,18 @@ public class UserSignInFormController {
     public PasswordField txtPassword;
     @FXML
     public PasswordField txtRepeatPassword;
-
+    private UserSignInBo userSignInBo = (UserSignInBo) BOFactory.getBOFactory().getTypes(BOFactory.BOTypes.USER_SIGN_IN);
     @FXML
     void btnSingInOnAction(ActionEvent event) throws IOException {
-        Stage stage = (Stage) this.pane.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/user_main_form.fxml"))));
-        stage.centerOnScreen();
-        stage.show();
+
+        UserDTO dto = new UserDTO(txtFirstName.getText(), txtLastName.getText(), txtUsername.getText(), txtEmail.getText(), txtPassword.getText());
+
+        if (userSignInBo.saveUser(dto)) {
+
+            Stage stage = (Stage) this.pane.getScene().getWindow();
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/user_main_form.fxml"))));
+            stage.centerOnScreen();
+            stage.show();
+        }
     }
 }
