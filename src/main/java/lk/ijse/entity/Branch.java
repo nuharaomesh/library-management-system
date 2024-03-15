@@ -20,7 +20,7 @@ public class Branch {
     private int branch_id;
     private String branch_name;
     private String branch_address;
-    private String contact;
+    private int contact;
     private boolean branch_closed;
     @ManyToMany
     @JoinTable (
