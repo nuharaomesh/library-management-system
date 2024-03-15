@@ -20,7 +20,8 @@ public class Book {
     private int book_id;
     private String title;
     private String genre;
-    private String Author;
+    private String author;
+    private String language;
     private boolean returned;
     private int count;
     @OneToMany (mappedBy = "book")
