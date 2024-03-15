@@ -20,6 +20,8 @@ public class Transaction {
     private int transaction_id;
     private LocalDate borrow_date;
     private LocalDate return_date;
+    private LocalDate due_date;
+    private boolean returned;
     @ManyToOne
     @JoinColumn (name = "user_id")
     private User user;

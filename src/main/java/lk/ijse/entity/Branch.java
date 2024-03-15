@@ -21,6 +21,7 @@ public class Branch {
     private String branch_name;
     private String branch_address;
     private String contact;
+    private boolean branch_closed;
     @ManyToMany
     @JoinTable (
             name = "Book_Details",
