@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import lk.ijse.config.FactoryConfiguration;
 
 public class Launcher extends Application {
     public static void main(String[] args) {
