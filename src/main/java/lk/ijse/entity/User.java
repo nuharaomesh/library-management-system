@@ -25,6 +25,9 @@ public class User {
     private String password;
     @OneToMany (mappedBy = "user")
     private List<Transaction> transactions;
+    @ManyToOne
+    @JoinColumn (name = "branch_id")
+    private Branch branch;
 
     public User(String first_name, String last_name, String username, String email, String password) {
         this.first_name = first_name;

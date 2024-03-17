@@ -22,11 +22,8 @@ public class Branch {
     private String branch_address;
     private int contact;
     private boolean branch_closed;
-    @ManyToMany
-    @JoinTable (
-            name = "Book_Details",
-            joinColumns = @JoinColumn(name = "book_id"),
-            inverseJoinColumns = @JoinColumn(name = "branch_id")
-    )
+    @OneToOne (mappedBy = "branch")
+    private Admin admin;
+    @OneToMany (mappedBy = "branch")
     private List<Book> books;
 }
