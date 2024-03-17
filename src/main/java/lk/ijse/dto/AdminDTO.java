@@ -16,5 +16,10 @@ public class AdminDTO {
     private String username;
     private String email;
     private String password;
+    private String branchId;
 
+    public AdminDTO(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
 }

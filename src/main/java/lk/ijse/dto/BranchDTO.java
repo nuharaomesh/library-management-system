@@ -10,8 +10,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class BranchDTO {
+    private String branchId;
     private String branchName;
     private String address;
     private int contact;
-    private boolean branchClosed;
 }

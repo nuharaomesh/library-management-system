@@ -11,8 +11,7 @@ import lombok.Setter;
 @Setter
 public class BookDTO {
     private String title;
-    private String genre;
+    private String category;
     private String author;
-    private boolean returned;
-    private int count;
+    private String language;
 }
