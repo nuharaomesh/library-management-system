@@ -34,7 +34,7 @@ public class UserSignInFormController {
     @FXML
     void btnSingInOnAction(ActionEvent event) throws IOException {
 
-        UserDTO dto = new UserDTO(txtFirstName.getText(), txtLastName.getText(), txtUsername.getText(), txtEmail.getText(), txtPassword.getText());
+        var dto = new UserDTO(txtFirstName.getText(), txtLastName.getText(), txtUsername.getText(), txtEmail.getText(), txtPassword.getText());
 
         if (userSignInBo.saveUser(dto)) {
 

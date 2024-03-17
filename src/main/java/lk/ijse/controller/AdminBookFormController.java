@@ -1,5 +1,7 @@
 package lk.ijse.controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -8,14 +10,13 @@ import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.AdminBookBO;
 import lk.ijse.dto.BookDTO;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AdminBookFormController {
 
     @FXML
-    private ComboBox<?> cmbBranch;
-    @FXML
-    private ComboBox<?> cmbCategory;
-    @FXML
-    private ComboBox<?> cmbNewBranch;
+    private ComboBox<String> cmbCategory;
     @FXML
     private ComboBox<?> cmbNewCategory;
     @FXML
@@ -51,7 +52,9 @@ public class AdminBookFormController {
     @FXML
     private TextField txtAuthorName;
     @FXML
-    private TextField txtBookQty;
+    private ComboBox<?> cmbNewLanguage;
+    @FXML
+    private ComboBox<String> cmbLanguage;
     @FXML
     private TextField txtBookTitle;
     @FXML
@@ -59,13 +62,35 @@ public class AdminBookFormController {
     @FXML
     private TextField txtNewAuthorName;
     @FXML
-    private TextField txtNewBookQty;
-    @FXML
     private TextField txtNewBookTitle;
     private AdminBookBO adminBookBO = (AdminBookBO) BOFactory.getBOFactory().getTypes(BOFactory.BOTypes.ADMIN_BOOK);
 
     public void initialize() {
         setPaneVisibleFalse();
+        setLanguageCmbValues();
+        setCategoryCmbValues();
+    }
+
+    private void setCategoryCmbValues() {
+
+        ObservableList<String> obList = FXCollections.observableArrayList();
+        obList.add("Horror");
+        obList.add("Story");
+        obList.add("Research");
+        obList.add("Fantasy");
+        obList.add("Novel");
+
+        cmbCategory.setItems(obList);
+    }
+
+    private void setLanguageCmbValues() {
+
+        ObservableList<String> obList = FXCollections.observableArrayList();
+        obList.add("English");
+        obList.add("Tamil");
+        obList.add("Sinhalese");
+
+        cmbLanguage.setItems(obList);
     }
 
     private void setPaneVisibleFalse() {
@@ -91,9 +116,10 @@ public class AdminBookFormController {
     @FXML
     void btnBookAddingOnAction(ActionEvent event) {     //save book
 
-        BookDTO dto = null; /*= new BookDTO(txtBookTitle.getText(), String.valueOf(cmbCategory.getValue()), txtAuthorName.getText(), Integer.valueOf(txtBookQty.getText()));*/
+        BookDTO dto = new BookDTO(txtBookTitle.getText(), String.valueOf(cmbCategory.getValue()), txtAuthorName.getText(), String.valueOf(cmbLanguage.getValue()));
 
         if (adminBookBO.saveBook(dto)) {
+
             new Alert(Alert.AlertType.CONFIRMATION, "Book Saved!!").show();
         } else {
             new Alert(Alert.AlertType.ERROR, "Book didn't save").show();
