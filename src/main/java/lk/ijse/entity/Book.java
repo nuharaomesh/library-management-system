@@ -22,19 +22,17 @@ public class Book {
     private String genre;
     private String author;
     private String language;
-    private boolean returned;
-    private int count;
+    private boolean available;
     @OneToMany (mappedBy = "book")
     private List<Transaction> transactions;
     @ManyToOne
     @JoinColumn (name = "branch_id")
     private Branch branch;
-    public Book(String title, String genre, String author, String language, boolean returned, int count) {
+
+    public Book(String title, String genre, String author, String language) {
         this.title = title;
         this.genre = genre;
         this.author = author;
         this.language = language;
-        this.returned = returned;
-        this.count = count;
     }
 }
