@@ -13,7 +13,7 @@ public class DAOFactory {
     }
 
     public enum DAOTypes {
-        ADMIN,BOOK,BOOK_DETAILS,BRANCH,TRANSACTION,USER
+        ADMIN,BOOK,BRANCH,TRANSACTION,USER
     }
 
     public SuperDAO getTypes(DAOTypes daoTypes) {
@@ -23,8 +23,6 @@ public class DAOFactory {
                 return new AdminDAOImpl();
             case BOOK:
                 return new BookDAOImpl();
-            case BOOK_DETAILS:
-                return new BookDetailsDAOImpl();
             case BRANCH:
                 return new BranchDAOImpl();
             case TRANSACTION:
