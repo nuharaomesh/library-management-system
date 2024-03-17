@@ -53,8 +53,8 @@ public class AdminSignInFormController {
         BranchDTO branchDto = new BranchDTO(branchId, txtBranchName.getText(), txtBranchAddress.getText(), Integer.valueOf(txtTel.getText()));
         AdminDTO dto = new AdminDTO(txtFirstName.getText(), txtLastName.getText(), txtAddress.getText(), txtUserName.getText(), txtEmail.getText(), txtPassword.getText(), branchId);
 
-        if (adminSignInBO.saveAdmin(dto)) {
-            if (adminBranchBO.saveBranch(branchDto)) {
+        if (adminBranchBO.saveBranch(branchDto)) {
+            if (adminSignInBO.saveAdmin(dto)) {
                 Stage stage = (Stage) this.pane.getScene().getWindow();
                 stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/user_main_form.fxml"))));
                 stage.centerOnScreen();
