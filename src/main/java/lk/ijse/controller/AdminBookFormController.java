@@ -4,6 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
+import lk.ijse.bo.BOFactory;
+import lk.ijse.bo.custom.AdminBookBO;
+import lk.ijse.dto.BookDTO;
 
 public class AdminBookFormController {
 
@@ -59,6 +62,7 @@ public class AdminBookFormController {
     private TextField txtNewBookQty;
     @FXML
     private TextField txtNewBookTitle;
+    private AdminBookBO adminBookBO = (AdminBookBO) BOFactory.getBOFactory().getTypes(BOFactory.BOTypes.ADMIN_BOOK);
 
     public void initialize() {
         setPaneVisibleFalse();
@@ -85,8 +89,15 @@ public class AdminBookFormController {
     }
 
     @FXML
-    void btnBookAddingOnAction(ActionEvent event) {
-        //add new books
+    void btnBookAddingOnAction(ActionEvent event) {     //save book
+
+        BookDTO dto = null; /*= new BookDTO(txtBookTitle.getText(), String.valueOf(cmbCategory.getValue()), txtAuthorName.getText(), Integer.valueOf(txtBookQty.getText()));*/
+
+        if (adminBookBO.saveBook(dto)) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Book Saved!!").show();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Book didn't save").show();
+        }
     }
 
     @FXML
