@@ -14,9 +14,9 @@
             <Font name="Ubuntu Bold" size="44.0" />
          </font>
       </Label>
-      <Label layoutX="38.0" layoutY="75.0" text="Get started" textFill="#480e8f">
+      <Label layoutX="43.0" layoutY="75.0" text="Get started" textFill="#250351">
          <font>
-            <Font name="Padauk Bold" size="22.0" />
+            <Font name="Ubuntu Bold" size="22.0" />
          </font>
       </Label>
       <ImageView fitHeight="26.0" fitWidth="145.0" layoutX="1022.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
@@ -24,25 +24,35 @@
             <Image url="@../assets/logo/BookWorm logo .png" />
          </image>
       </ImageView>
-      <JFXButton buttonType="RAISED" layoutX="117.0" layoutY="290.0" onAction="#btnAdminOnAction" prefHeight="51.0" prefWidth="316.0" style="-fx-background-radius: 10; -fx-background-color: rgba(67, 0, 152, 1);" text="Continue as Admin" textFill="WHITE">
+      <ImageView fitHeight="418.0" fitWidth="611.0" layoutX="184.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/image/welcome%20page%20border.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="306.0" layoutY="296.0" onAction="#btnAdminOnAction" prefHeight="51.0" prefWidth="316.0" style="-fx-background-color: rgba(67, 0, 152, 1);" text="Continue as Admin" textFill="WHITE">
          <font>
             <Font name="Padauk Bold" size="21.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="117.0" layoutY="378.0" onAction="#btnUserOnAction" prefHeight="51.0" prefWidth="316.0" style="-fx-background-radius: 10; -fx-background-color: rgba(43, 0, 97, 1);" text="Continue as User" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="306.0" layoutY="403.0" onAction="#btnUserOnAction" prefHeight="51.0" prefWidth="316.0" style="-fx-background-color: rgba(43, 0, 97, 1);" text="Continue as User" textFill="WHITE">
          <font>
             <Font name="Padauk Bold" size="21.0" />
          </font>
       </JFXButton>
-      <ImageView fitHeight="233.0" fitWidth="233.0" layoutX="701.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="381.0" fitWidth="381.0" layoutX="798.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/image/Admin.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="207.0" fitWidth="298.0" layoutX="669.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../assets/image/User.png" />
-         </image>
-      </ImageView>
+      <Label layoutX="306.0" layoutY="258.0" text="Continue as," textFill="#480e8f">
+         <font>
+            <Font name="Ubuntu Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="455.0" layoutY="363.0" text="or" textFill="#480e8f">
+         <font>
+            <Font name="Ubuntu Bold" size="17.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
