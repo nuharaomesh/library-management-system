@@ -22,7 +22,6 @@ public class UserDAOImpl implements UserDAO {
             session.save(entity);
             transaction.commit();
             session.close();
-            System.out.println("wade hari!!!");
             return true;
         } catch (Exception e) {
             e.printStackTrace();
