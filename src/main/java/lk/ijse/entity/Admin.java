@@ -22,7 +22,6 @@ public class Admin {
     private String username;
     private String email;
     private String password;
-    private String branch_id;
     @OneToOne
     @JoinColumn (name = "branch_id")
     private Branch branch;
@@ -34,7 +33,7 @@ public class Admin {
         this.username = username;
         this.email = email;
         this.password = password;
-        this.branch_id = branch_id;
+        branch.setBranch_id(branch_id);
     }
 
     public Admin(String email, String password) {
