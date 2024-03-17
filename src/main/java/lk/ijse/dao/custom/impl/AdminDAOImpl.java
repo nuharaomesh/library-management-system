@@ -40,6 +40,14 @@ public class AdminDAOImpl implements AdminDAO {
     }
 
     @Override
+    public String getBranchId(String EMAIL) {
+        Query<Admin> query = session.createQuery("FROM Admin WHERE email = :email");
+        query.setParameter("email", EMAIL);
+        System.out.println(query.uniqueResult().getBranch().getBranch_id());
+        return query.uniqueResult().getBranch().getBranch_id();
+    }
+
+    @Override
     public boolean update(Admin entity) {
         return false;
     }

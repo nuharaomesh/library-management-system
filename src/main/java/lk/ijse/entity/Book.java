@@ -29,10 +29,12 @@ public class Book {
     @JoinColumn (name = "branch_id")
     private Branch branch;
 
-    public Book(String title, String genre, String author, String language) {
+    public Book(String title, String genre, String author, String language, String branch_id) {
         this.title = title;
         this.genre = genre;
         this.author = author;
         this.language = language;
+        branch = new Branch();
+        branch.setBranch_id(branch_id);
     }
 }

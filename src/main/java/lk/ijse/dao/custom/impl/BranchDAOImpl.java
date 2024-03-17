@@ -7,7 +7,6 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -53,12 +52,13 @@ public class BranchDAOImpl implements BranchDAO {
     @Override
     public String genId() throws SQLException {
 
+        Query<String> query = session.createQuery("SELECT branch_id FROM Branch ORDER BY branch_id DESC LIMIT 1");
+        String branchId = query.uniqueResult();
 
-        Query<Branch> query = session.createQuery("SELECT branch_id FROM Branch ORDER BY branch_id DESC LIMIT 1");
-        Branch branch = query.uniqueResult();
-
-        if (branch != null ) {
-            int branch_id = Integer.valueOf(branch.getBranch_id().replace("B00-", ""));
+        System.out.println(branchId);
+        System.out.println("sadasd");
+        if (branchId != null) {
+            int branch_id = Integer.valueOf(branchId.replace("B00-", "")) + 1;
             return String.format("B00-%03d", branch_id);
         }
         return "B00-001";

@@ -14,4 +14,5 @@ public class BookDTO {
     private String category;
     private String author;
     private String language;
+    private String branch_id;
 }

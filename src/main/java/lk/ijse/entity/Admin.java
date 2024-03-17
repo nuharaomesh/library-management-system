@@ -33,6 +33,7 @@ public class Admin {
         this.username = username;
         this.email = email;
         this.password = password;
+        branch = new Branch();
         branch.setBranch_id(branch_id);
     }
 

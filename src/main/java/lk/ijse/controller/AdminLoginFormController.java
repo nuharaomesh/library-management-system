@@ -25,7 +25,7 @@ public class AdminLoginFormController {
     @FXML
     private PasswordField txtPassword;
     private AdminLoginBO adminLoginBO = (AdminLoginBO) BOFactory.getBOFactory().getTypes(BOFactory.BOTypes.ADMIN_LOGIN);
-
+    public static String ADMIN_EMAIL;
     @FXML
     void btnForgetPasswordOnAction(ActionEvent event) {
 
@@ -37,6 +37,7 @@ public class AdminLoginFormController {
         var admin = new AdminDTO(txtEmail.getText(), txtPassword.getText());
 
         if (adminLoginBO.checkCredential(admin)) {
+            ADMIN_EMAIL = txtEmail.getText();
             Stage stage = (Stage) this.pane.getScene().getWindow();
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/admin_main_form.fxml"))));
             stage.centerOnScreen();

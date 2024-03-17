@@ -64,38 +64,12 @@ public class AdminBookFormController {
     @FXML
     private TextField txtNewBookTitle;
     private AdminBookBO adminBookBO = (AdminBookBO) BOFactory.getBOFactory().getTypes(BOFactory.BOTypes.ADMIN_BOOK);
+    private String EMAIL = AdminLoginFormController.ADMIN_EMAIL;
 
     public void initialize() {
         setPaneVisibleFalse();
         setLanguageCmbValues();
         setCategoryCmbValues();
-    }
-
-    private void setCategoryCmbValues() {
-
-        ObservableList<String> obList = FXCollections.observableArrayList();
-        obList.add("Horror");
-        obList.add("Story");
-        obList.add("Research");
-        obList.add("Fantasy");
-        obList.add("Novel");
-
-        cmbCategory.setItems(obList);
-    }
-
-    private void setLanguageCmbValues() {
-
-        ObservableList<String> obList = FXCollections.observableArrayList();
-        obList.add("English");
-        obList.add("Tamil");
-        obList.add("Sinhalese");
-
-        cmbLanguage.setItems(obList);
-    }
-
-    private void setPaneVisibleFalse() {
-        paneBookAdd.setVisible(false);
-        paneBookUpdateForm.setVisible(false);
     }
 
     @FXML
@@ -116,10 +90,11 @@ public class AdminBookFormController {
     @FXML
     void btnBookAddingOnAction(ActionEvent event) {     //save book
 
-        BookDTO dto = new BookDTO(txtBookTitle.getText(), String.valueOf(cmbCategory.getValue()), txtAuthorName.getText(), String.valueOf(cmbLanguage.getValue()));
+        String branch_id = adminBookBO.getId(EMAIL);
+        System.out.println(branch_id);
+        BookDTO dto = new BookDTO(txtBookTitle.getText(), String.valueOf(cmbCategory.getValue()), txtAuthorName.getText(), String.valueOf(cmbLanguage.getValue()), branch_id);
 
         if (adminBookBO.saveBook(dto)) {
-
             new Alert(Alert.AlertType.CONFIRMATION, "Book Saved!!").show();
         } else {
             new Alert(Alert.AlertType.ERROR, "Book didn't save").show();
@@ -144,5 +119,32 @@ public class AdminBookFormController {
     @FXML
     void btnBookAddingBackOnAction(ActionEvent event) {
         paneBookAdd.setVisible(false);
+    }
+
+    private void setPaneVisibleFalse() {
+        paneBookAdd.setVisible(false);
+        paneBookUpdateForm.setVisible(false);
+    }
+
+    private void setCategoryCmbValues() {
+
+        ObservableList<String> obList = FXCollections.observableArrayList();
+        obList.add("Horror");
+        obList.add("Story");
+        obList.add("Research");
+        obList.add("Fantasy");
+        obList.add("Novel");
+
+        cmbCategory.setItems(obList);
+    }
+
+    private void setLanguageCmbValues() {
+
+        ObservableList<String> obList = FXCollections.observableArrayList();
+        obList.add("English");
+        obList.add("Tamil");
+        obList.add("Sinhalese");
+
+        cmbLanguage.setItems(obList);
     }
 }
