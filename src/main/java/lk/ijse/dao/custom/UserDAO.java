@@ -4,4 +4,5 @@ import lk.ijse.dao.CrudDAO;
 import lk.ijse.entity.User;
 
 public interface UserDAO extends CrudDAO<User> {
+    String getId(String email);
 }

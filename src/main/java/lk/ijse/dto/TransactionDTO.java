@@ -12,8 +12,9 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class TransactionDTO {
-    private LocalDate borrowDate;
-    private LocalDate returnDate;
-    private LocalDate dueDate;
-    private boolean returned;
+    private String borrowDate;
+    private String dueDate;
+    private String returned;
+    private String bookId;
+    private String userId;
 }

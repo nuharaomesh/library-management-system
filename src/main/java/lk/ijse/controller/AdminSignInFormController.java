@@ -56,7 +56,7 @@ public class AdminSignInFormController {
         if (adminBranchBO.saveBranch(branchDto)) {
             if (adminSignInBO.saveAdmin(dto)) {
                 Stage stage = (Stage) this.pane.getScene().getWindow();
-                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/user_main_form.fxml"))));
+                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/admin_main_form.fxml"))));
                 stage.centerOnScreen();
                 stage.show();
             }

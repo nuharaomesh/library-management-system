@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
 
 import java.util.List;
 
@@ -22,6 +23,7 @@ public class Book {
     private String genre;
     private String author;
     private String language;
+    @ColumnDefault("true")
     private boolean available;
     @OneToMany (mappedBy = "book")
     private List<Transaction> transactions;

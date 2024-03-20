@@ -12,7 +12,7 @@ import lombok.Setter;
 public class UsersBookTM {
     private String title;
     private String author;
-    private String Category;
+    private String category;
     private String language;
     private String status;
 }

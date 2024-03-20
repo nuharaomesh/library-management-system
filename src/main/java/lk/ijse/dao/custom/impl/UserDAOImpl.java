@@ -2,9 +2,11 @@ package lk.ijse.dao.custom.impl;
 
 import lk.ijse.config.FactoryConfiguration;
 import lk.ijse.dao.custom.UserDAO;
+import lk.ijse.entity.Admin;
 import lk.ijse.entity.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import java.util.List;
 
@@ -47,5 +49,15 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public List<User> getAll() {
         return null;
+    }
+
+    @Override
+    public String getId(String email) {
+        Session session = factory.getSession();
+
+        Query query = session.createQuery("FROM User WHERE email= :email");
+        query.setParameter("email", email);
+        Admin admin = (Admin) query.uniqueResult();
+        return String.valueOf(admin.getAdmin_id());
     }
 }
