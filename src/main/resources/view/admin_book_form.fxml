@@ -54,7 +54,7 @@
           <TableColumn fx:id="colTitle" prefWidth="288.0" text="Title" />
             <TableColumn fx:id="colCategory" prefWidth="204.0" text="Category" />
             <TableColumn fx:id="colAuthor" prefWidth="216.0" text="Author" />
-            <TableColumn fx:id="colCount" prefWidth="99.0" text="Count" />
+            <TableColumn fx:id="colStatus" prefWidth="99.0" text="Count" />
         </columns>
       </TableView>
       <JFXButton contentDisplay="RIGHT" layoutX="871.0" layoutY="146.0" onAction="#btnBookAddOnAction" prefHeight="29.0" prefWidth="71.0" style="-fx-background-color: white;" text="Add" textFill="#2f0686">
@@ -114,7 +114,7 @@
             <Font name="Ubuntu Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="869.0" layoutY="227.0" text="Count" textFill="#4f07c3">
+      <Label layoutX="858.0" layoutY="227.0" text="Status" textFill="#4f07c3">
          <font>
             <Font name="Ubuntu Bold" size="17.0" />
          </font>
@@ -169,7 +169,7 @@
             </HBox>
          </children>
       </Pane>
-      <Pane fx:id="paneBookAdd" layoutX="309.0" layoutY="144.0" prefHeight="482.0" prefWidth="636.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+      <Pane fx:id="paneBookAdd" layoutX="306.0" layoutY="142.0" prefHeight="482.0" prefWidth="636.0" style="-fx-background-color: white; -fx-background-radius: 10 0 10 10;">
          <effect>
             <DropShadow>
                <color>

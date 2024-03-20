@@ -137,11 +137,6 @@
             <Font name="Padauk Book Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="1069.0" layoutY="418.0" text="Due Date" textFill="#797979">
-         <font>
-            <Font name="Padauk Book Bold" size="16.0" />
-         </font>
-      </Label>
       <Label layoutX="1323.0" layoutY="418.0" text="Category" textFill="#797979">
          <font>
             <Font name="Padauk Book Bold" size="16.0" />
@@ -154,19 +149,6 @@
                   <Label fx:id="lblBookTitle">
                      <font>
                         <Font name="Impact" size="50.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-         </children>
-      </Pane>
-      <Pane layoutX="986.0" layoutY="465.0" prefHeight="62.0" prefWidth="233.0">
-         <children>
-            <HBox alignment="CENTER" layoutX="3.0" layoutY="2.0" prefHeight="58.0" prefWidth="227.0">
-               <children>
-                  <Label fx:id="lblDueDate" textFill="#40099a">
-                     <font>
-                        <Font name="Padauk Book Bold" size="22.0" />
                      </font>
                   </Label>
                </children>
@@ -395,5 +377,15 @@
             </Button>
          </children>
       </Pane>
+      <Label layoutX="1055.0" layoutY="418.0" text="Language" textFill="#797979">
+         <font>
+            <Font name="Padauk Book Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblLanguage" layoutX="1027.0" layoutY="478.0" textFill="#797979">
+         <font>
+            <Font name="Padauk Book Bold" size="30.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
