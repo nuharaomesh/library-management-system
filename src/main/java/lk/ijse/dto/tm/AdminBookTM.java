@@ -14,5 +14,5 @@ public class AdminBookTM {
     private String title;
     private String category;
     private String author;
-    private String count;
+    private String status;
 }

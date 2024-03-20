@@ -5,10 +5,13 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.AdminBookBO;
 import lk.ijse.dto.BookDTO;
+import lk.ijse.dto.tm.AdminBookTM;
+import lk.ijse.util.Validation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +37,7 @@ public class AdminBookFormController {
     @FXML
     private TableColumn<?, ?> colCategory;
     @FXML
-    private TableColumn<?, ?> colCount;
+    private TableColumn<?, ?> colStatus;
     @FXML
     private TableColumn<?, ?> colTel;
     @FXML
@@ -44,7 +47,7 @@ public class AdminBookFormController {
     @FXML
     private TableView<?> tblBookDetails;
     @FXML
-    private TableView<?> tblBooks;
+    private TableView<AdminBookTM> tblBooks;
     @FXML
     private TextField txtBookTitleSearch;
     @FXML
@@ -65,11 +68,48 @@ public class AdminBookFormController {
     private TextField txtNewBookTitle;
     private AdminBookBO adminBookBO = (AdminBookBO) BOFactory.getBOFactory().getTypes(BOFactory.BOTypes.ADMIN_BOOK);
     private String EMAIL = AdminLoginFormController.ADMIN_EMAIL;
+    private String adminBranchId;
+    private Validation validation = Validation.getInstance();
 
     public void initialize() {
+        setAdminBranchId(EMAIL);
+        setCellValueFactory();
+        loadAllBooks();
         setPaneVisibleFalse();
         setLanguageCmbValues();
         setCategoryCmbValues();
+    }
+
+    private void setAdminBranchId(String email) {
+        adminBranchId = adminBookBO.getAdminBranchId(email);
+    }
+
+    private void setCellValueFactory() {
+        colBookID.setCellValueFactory(new PropertyValueFactory<>("bookID"));
+        colTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
+        colCategory.setCellValueFactory(new PropertyValueFactory<>("category"));
+        colAuthor.setCellValueFactory(new PropertyValueFactory<>("author"));
+        colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+    }
+
+    public void loadAllBooks() {
+
+        ObservableList<AdminBookTM> obList = FXCollections.observableArrayList();
+
+        List<BookDTO> dtoList = adminBookBO.getAllBooks(adminBranchId);
+
+        for (BookDTO dto: dtoList) {
+            obList.add(
+                    new AdminBookTM(
+                            dto.getBookId(),
+                            dto.getTitle(),
+                            dto.getCategory(),
+                            dto.getAuthor(),
+                            "available"
+                    )
+            );
+        }
+        tblBooks.setItems(obList);
     }
 
     @FXML
@@ -91,13 +131,15 @@ public class AdminBookFormController {
     void btnBookAddingOnAction(ActionEvent event) {     //save book
 
         String branch_id = adminBookBO.getId(EMAIL);
-        System.out.println(branch_id);
         BookDTO dto = new BookDTO(txtBookTitle.getText(), String.valueOf(cmbCategory.getValue()), txtAuthorName.getText(), String.valueOf(cmbLanguage.getValue()), branch_id);
 
-        if (adminBookBO.saveBook(dto)) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Book Saved!!").show();
-        } else {
-            new Alert(Alert.AlertType.ERROR, "Book didn't save").show();
+        if (validation.getValidation("Book", dto)) {
+            if (adminBookBO.saveBook(dto)) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Book Saved!!").showAndWait();
+                paneBookAdd.setVisible(false);
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Book didn't save").show();
+            }
         }
     }
 

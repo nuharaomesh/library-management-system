@@ -35,16 +35,6 @@ public class AdminBranchFormController {
     @FXML
     private TextField txtBookTitleSearch;
 
-    //Branch add form properties
-    @FXML
-    private Pane paneAddBranchesForm;
-    @FXML
-    private TextField txtAddress;
-    @FXML
-    private TextField txtBranchName;
-    @FXML
-    private TextField txtTel;
-
     //Branch update form properties
     @FXML
     private Pane paneUpdateBranchesForm;
@@ -61,7 +51,6 @@ public class AdminBranchFormController {
     }
 
     private void setPaneVisibleForms() {
-        paneAddBranchesForm.setVisible(false);
         paneUpdateBranchesForm.setVisible(false);
     }
 
@@ -81,25 +70,8 @@ public class AdminBranchFormController {
     }
 
     @FXML
-    void btnBranchAddOnAction(ActionEvent event) {
-        paneAddBranchesForm.setVisible(true);
-    }
-
-    @FXML
     void btnUpdateOnAction(ActionEvent event) {
         paneUpdateBranchesForm.setVisible(true);
-    }
-
-    //Add new Branch Form
-
-    @FXML
-    void btnAddBranchBackOnAction(ActionEvent event) {
-        paneAddBranchesForm.setVisible(false);
-    }
-
-    @FXML
-    void btnAddingNewBranchOnAction(ActionEvent event) {
-
     }
 
     //Update Branch Form
