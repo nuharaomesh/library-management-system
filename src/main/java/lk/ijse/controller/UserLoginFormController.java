@@ -8,6 +8,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.bo.BOFactory;
+import lk.ijse.bo.custom.UserLoginBo;
 
 import java.io.IOException;
 
@@ -19,8 +21,12 @@ public class UserLoginFormController {
     public TextField txtEmail;
     @FXML
     public AnchorPane pane;
+    private UserLoginBo userLoginBo = (UserLoginBo) BOFactory.getBOFactory().getTypes(BOFactory.BOTypes.USER_LOGIN);
+    public static String userId;
 
-
+    public void initialize() {
+        userId = userLoginBo.getId(txtEmail.getText());
+    }
     @FXML
     void btnLoginOnAction(ActionEvent event) throws IOException {
         Stage stage = (Stage) this.pane.getScene().getWindow();
