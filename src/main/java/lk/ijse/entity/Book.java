@@ -19,11 +19,16 @@ public class Book {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int book_id;
+    @Column(nullable = false)
     private String title;
+    @Column(nullable = false)
     private String genre;
+    @Column(nullable = false)
     private String author;
+    @Column(nullable = false)
     private String language;
     @ColumnDefault("true")
+    @Column(nullable = false)
     private boolean available;
     @OneToMany (mappedBy = "book")
     private List<Transaction> transactions;
